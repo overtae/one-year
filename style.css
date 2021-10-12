@@ -39,7 +39,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("github.com/overtae/one-year/img/1.jpg");
+  background-image: url("one-year/img/1.jpg");
 }
 #background .calendar {
   cursor: pointer;
