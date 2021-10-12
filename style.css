@@ -1,0 +1,136 @@
+* {
+  font-family: "Ubuntu", sans-serif;
+  overflow: hidden;
+}
+.about {
+  position: fixed;
+  top: 3vh;
+  right: 3vh;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: #444;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+.about span {
+  position: relative;
+  z-index: 1;
+}
+.about::before {
+  content: "";
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  transform: translate(-50%, -50%);
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  background: #a0baed;
+  transition: width 0.5s, height 0.5s;
+}
+.about:hover::before {
+  width: 200px;
+  height: 200px;
+}
+#background {
+  width: 100%;
+  height: 98vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/img/1.jpg");
+}
+#background .calendar {
+  cursor: pointer;
+}
+@media only screen and (max-width: 1500px) and (min-width: 1000px) {
+  #background .calendar {
+    position: fixed;
+    bottom: 17%;
+    left: 12%;
+    width: 20%;
+    height: 25%;
+  }
+  @media only screen and (min-height: 200px) and (max-height: 600px) {
+    #background .calendar {
+      position: fixed;
+      bottom: 0%;
+      left: 12%;
+      width: 20%;
+      height: 35%;
+    }
+  }
+  @media only screen and (min-height: 800px) {
+    #background .calendar {
+      position: fixed;
+      bottom: 17%;
+      left: 1%;
+      width: 30%;
+      height: 25%;
+    }
+  }
+}
+@media only screen and (max-width: 1000px) and (min-width: 550px) {
+  #background .calendar {
+    position: fixed;
+    bottom: 17%;
+    left: 0%;
+    width: 25%;
+    height: 25%;
+  }
+  @media only screen and (max-height: 600px) {
+    #background .calendar {
+      position: fixed;
+      bottom: 17%;
+      left: 12%;
+      width: 20%;
+      height: 25%;
+    }
+  }
+  @media only screen and (max-height: 400px) {
+    #background .calendar {
+      position: fixed;
+      bottom: 0%;
+      left: 12%;
+      width: 20%;
+      height: 40%;
+    }
+  }
+}
+@media only screen and (min-width: 1500px) and (min-height: 300px) {
+  #background .calendar {
+    position: fixed;
+    bottom: 8%;
+    left: 12%;
+    width: 25%;
+    height: 35%;
+  }
+  @media only screen and (max-height: 600px) and (min-height: 300px) {
+    #background .calendar {
+      position: fixed;
+      bottom: 0%;
+      left: 12%;
+      width: 20%;
+      height: 40%;
+    }
+  }
+}
+@media only screen and (max-width: 550px) and (max-height: 600px) {
+  #background .calendar {
+    position: fixed;
+    bottom: 17%;
+    left: 12%;
+    width: 20%;
+    height: 25%;
+  }
+  @media only screen and (min-height: 350px) and (max-height: 600px) {
+    #background .calendar {
+      position: fixed;
+      bottom: 17%;
+      left: 0%;
+      width: 20%;
+      height: 25%;
+    }
+  }
+}

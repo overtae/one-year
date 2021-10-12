@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="background">
+        <div class="calendar"></div>
+    </div>
+    <script type="text/javascript">
+        let btn = document.querySelector('.calendar');
+        var number = 0;
+        btn.onclick = function() {
+            if ( number == 12) {
+                number = 0;
+            }
+            var background_img = "/img/"; 
+            number += 1;
+            var background = document.getElementById("background");
+            background_img += number + ".jpg";
+            background.style.backgroundImage = "url('" + background_img + "')";
+        }
+    </script>
+
+    <a href='about.html' class="about"><span>About</span></a>
+    <script>
+        const about = document.querySelector('.about');
+        about.onmousemove = function(e) {
+            const x = e.pageX - about.offsetLeft;
+            const Y = e.pageY - about.offsetTop;
+
+            about.style.setProperty('--x', x + 'px');
+            about.style.setProperty('--y', y + 'px');
+        }
+    </script>
+</body>
+</html>
